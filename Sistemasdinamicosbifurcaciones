@@ -1,4 +1,0 @@
-### 1. Sistemas Dinámicos y Bifurcaciones (*Tipping Points*)
-Para modelar cómo el cerebro pierde estabilidad y transita hacia una crisis ante cambios en parámetros fisiológicos ($\mu$), se implementan sistemas dinámicos no lineales:
-$$\frac{dx}{dt} = \mu + x - x^3$$
-*El sistema analiza puntos de equilibrio, estabilidad lineal y el punto crítico (*saddle-node bifurcation*) que desencadena la descarga.*
