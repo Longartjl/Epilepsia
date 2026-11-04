@@ -1,4 +1,0 @@
-### 2. Ecuaciones Diferenciales Estocásticas (EDE) y Ruido Fisiológico
-Las fluctuaciones térmicas, metabólicas y el ruido neuroeléctrico se modelan mediante procesos estocásticos de Wiener:
-$$dX_t = \left( \alpha - \beta X_t \right) dt + \sigma dW_t$$
-*Permite simular cómo la variabilidad estocástica puede precipitar un evento crítico en redes neuronales.*
