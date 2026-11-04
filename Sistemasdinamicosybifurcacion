@@ -1,0 +1,21 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+print("=== MÓDULO 1: SISTEMAS DINÁMICOS Y BIFURCACIÓN ===")
+mu_valores = [-0.5, 0.0, 0.5]
+x = np.linspace(-2.0, 2.0, 400)
+
+plt.figure(figsize=(8, 4))
+for mu in mu_valores:
+    dxdt = mu + x - x**3
+    plt.plot(x, dxdt, label=f'Parámetro $\mu$ = {mu}', lw=2)
+    
+plt.axhline(0, color='black', linestyle='--', alpha=0.7)
+plt.title("Módulo 1: Análisis de Bifurcación (Tipping Point Ictal)")
+plt.xlabel("Actividad Cortical ($x$)")
+plt.ylabel("Tasa de Cambio ($dx/dt$)")
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+print("[OK] Módulo 1 ejecutado con éxito.\n")
