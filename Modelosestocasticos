@@ -1,0 +1,30 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+print("=== MÓDULO 2: MODELOS ESTOCÁSTICOS (RUIDO EDE) ===")
+np.random.seed(42)
+T = 10.0
+N = 1000
+dt = T / N
+tiempo = np.linspace(0, T, N)
+
+alpha, beta, sigma = 0.5, 0.8, 0.4
+X = np.zeros(N)
+X[0] = 0.1
+
+for i in range(1, N):
+    dW = np.random.normal(0, np.sqrt(dt))
+    dX = (alpha - beta * X[i-1]) * dt + sigma * dW
+    X[i] = X[i-1] + dX
+    
+plt.figure(figsize=(8, 3.5))
+plt.plot(tiempo, X, color='darkmagenta', lw=1.5, label='Excitabilidad Estocástica ($X_t$)')
+plt.axhline(0.6, color='crimson', linestyle='--', label='Umbral Crítico')
+plt.title("Módulo 2: Ruido Fisiológico y EDEs")
+plt.xlabel("Tiempo Normalizado")
+plt.ylabel("Excitabilidad")
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+print("[OK] Módulo 2 ejecutado con éxito.\n")
