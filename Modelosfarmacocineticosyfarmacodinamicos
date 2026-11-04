@@ -1,3 +1,0 @@
-### 3. Modelos Farmacocinéticos y Farmacodinámicos (PK/PD)
-Se simula el tránsito de fármacos antiepilépticos y su efecto inhibitorio sobre la excitabilidad cortical mediante la ecuación de Hill ($E_{max}$):
-$$E(C) = E_{max} \frac{C(t)^n}{EC_{50}^n + C(t)^n}$$
